@@ -115,7 +115,7 @@ export default function Registerpage() {
             <Button
               isLoading={isSubmitting}
               type="submit"
-              colorScheme="primary"
+              colorScheme="blue"
               size="lg"
               fontSize="md"
             >
@@ -132,7 +132,7 @@ export default function Registerpage() {
         <Button
           variant="outline"
           isFullWidth
-          colorScheme="red"
+          colorScheme="blue"
           leftIcon={<FaGoogle />}
           onClick={() =>
             signInWithGoogle()

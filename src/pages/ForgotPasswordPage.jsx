@@ -65,7 +65,7 @@ export default function ForgotPasswordPage() {
                 required
               />
             </FormControl>
-            <Button type="submit" colorScheme="primary" size="lg" fontSize="md">
+            <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
               Submit
             </Button>
           </Stack>

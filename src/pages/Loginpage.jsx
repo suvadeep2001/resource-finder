@@ -100,7 +100,7 @@ export default function Loginpage() {
             <Button
               isLoading={isSubmitting}
               type="submit"
-              colorScheme="primary"
+              colorScheme="blue"
               size="lg"
               fontSize="md"
             >
@@ -120,7 +120,7 @@ export default function Loginpage() {
         <Button
           variant="outline"
           isFullWidth
-          colorScheme="red"
+          colorScheme="blue"
           leftIcon={<FaGoogle />}
           onClick={() => signInWithGoogle()
           .then(user=>console.log(user))
