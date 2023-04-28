@@ -6,7 +6,7 @@
   }
   
   .resource {
-    background-color: rgb(199, 206, 100);
+    background-color: rgb(42, 230, 230);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: calc(33.33% - 20px);
@@ -60,3 +60,19 @@
   .resource button:hover {
     background-color: #005fa3;
   }
+  @media (max-width: 768px) {
+    .resource {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .resource {
+      width: 100%;
+    }
+  }
+  .resource img {
+    max-width: 100%;
+    height: auto;
+  }
+  

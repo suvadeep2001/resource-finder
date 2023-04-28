@@ -1,35 +1,40 @@
-import React from 'react'
-import { Layout } from '../components/Layout'
-import { Badge, Code, chakra,Container, Heading } from '@chakra-ui/react'
-import { Card } from '../components/Card'
-import { useAuth } from '../contexts/AuthContext'
+import React from "react";
+import { Layout } from "../components/Layout";
+import { Badge, Code, chakra, Container, Heading } from "@chakra-ui/react";
+import { Card } from "../components/Card";
+import { useAuth } from "../contexts/AuthContext";
+
+import "../css/Profile.css";
 
 export default function Profilepage() {
- const {currentUser} = useAuth()
+  const { currentUser } = useAuth();
   return (
     <Layout>
       <Heading>
         Profile page
         {/* <Badge colorScheme='green' fontSize='lg' mx={4}>
-          Protected Page
-        </Badge> */}
+      Protected Page
+    </Badge> */}
       </Heading>
 
-      <Container maxW='container.lg' overflowX='auto' py={4}>
+      <Container maxW="container.lg" overflowX="auto">
+        <chakra.pre className="profile-info">
+          <div className="button-container">
+            <button className="profile-button">Your Uid:</button>
+            <span className="profile-value">{currentUser.uid}</span>
+          </div>
 
-      <chakra.pre>
-       
-         {/* {JSON.stringify(currentUser,null,2)} */}
-         Your Uid: {(currentUser.uid)}
-         <br></br>
-         <br></br>
-         Your Name: {(currentUser.displayName)}
-         <br></br>
-         <br></br>
-        Your Email Id: {(currentUser.email)}
-      </chakra.pre>
+          <div className="button-container">
+            <button className="profile-button">Your Name:</button>
+            <span className="profile-value">{currentUser.displayName}</span>
+          </div>
 
+          <div className="button-container">
+            <button className="profile-button">Your Email Id:</button>
+            <span className="profile-value">{currentUser.email}</span>
+          </div>
+        </chakra.pre>
       </Container>
     </Layout>
-  )
+  );
 }

@@ -52,7 +52,7 @@ export default function Registerpage() {
             }
 
             setIsSubmitting(true);
-
+            
             try {
               await register(name,email, password);
               toast({
