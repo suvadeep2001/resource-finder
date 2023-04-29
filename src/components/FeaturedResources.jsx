@@ -13,22 +13,16 @@ import {
 import axios from "axios";
 
 const FeaturedResources = () => {
-  const [resources, setResources] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://server-d4j9.onrender.com/api/data"
-        );
-        setResources(response.data);
-      } catch (error) {
-        console.log("Error fetching resources:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  // const [resources, setResources] = useState([]);
+  const resources = [
+    {
+      "id": "1",
+      "title": "Click Here",
+      "description": "Data Structures & Algorithms",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+      "url": "https://medium.com/@rd893918/perfect-roadmap-for-data-structure-and-algorithm-6062f2490431"
+    }
+  ]
 
   return (
     <section>

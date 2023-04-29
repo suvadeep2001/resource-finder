@@ -25,7 +25,7 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path="/profile" component={Profilepage} />
           <ProtectedRoute
             exact
-            path="/protected-page"
+            path="/resources"
             component={ProtectedPage}
           />
           <ProtectedRoute
@@ -38,6 +38,7 @@ export default function AppRouter(props) {
             path="/reset-password"
             component={ResetPasswordPage}
           />
+          
           <Route exact path="*" component={NotfoundPage} />
         </Switch>
       </Router>

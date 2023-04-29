@@ -27,7 +27,7 @@ export function Navbar() {
         {!currentUser && <Navlink to='/login' name='Login' />}
         {!currentUser && <Navlink to='/register' name='Register' />}
         {currentUser && <Navlink to='/profile' name='Profile' />}
-        {currentUser && <Navlink to='/protected-page' name='Get Resources' />}
+        {currentUser && <Navlink to='/resources' name='Get Resources' />}
         {currentUser && <Navlink
           to='/logout'
           name='Logout'
