@@ -26,7 +26,7 @@ const FeaturedResources = () => {
 
   return (
     <section>
-      <Heading>
+      <Heading fontFamily="'Lobster', cursive">
         <u>Featured Resources</u>
       </Heading>
 

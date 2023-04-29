@@ -13,6 +13,7 @@ import {
   Redirect,
   useLocation,
 } from "react-router-dom/cjs/react-router-dom.min";
+import DataStructure from "../pages/DataStructure";
 
 export default function AppRouter(props) {
   return (
@@ -23,6 +24,7 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path="/login" component={Loginpage} />
           <ProtectedRoute exact path="/register" component={Registerpage} />
           <ProtectedRoute exact path="/profile" component={Profilepage} />
+          <ProtectedRoute exact path="/dsa" component={DataStructure} />
           <ProtectedRoute
             exact
             path="/resources"

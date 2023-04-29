@@ -1,11 +1,12 @@
-import { Heading, Container, Badge } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
+import { Heading, Container, Badge, Input } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
 export default function ProtectedPage() {
   const [resources, setResources] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,13 +23,29 @@ export default function ProtectedPage() {
     fetchData();
   }, []);
 
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredResources = resources.filter((resource) =>
+    resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Layout>
       <Heading>
         <u>All Resources</u>
       </Heading>
+      <Input
+        type="text"
+        placeholder="Search your resources"
+        value={searchTerm}
+        onChange={handleSearch}
+        mt={4}
+        mb={8}
+      />
       <div className="resource-list">
-        {resources.map((resource) => (
+        {filteredResources.map((resource) => (
           <motion.div
             key={resource.id}
             className="resource"
