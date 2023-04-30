@@ -10,30 +10,32 @@ export default function Profilepage() {
   const { currentUser } = useAuth();
   return (
     <Layout>
-      <Heading>
-        Profile page
+      <Heading fontFamily="'Lobster', cursive">
+        <u>Profile page</u>
         {/* <Badge colorScheme='green' fontSize='lg' mx={4}>
       Protected Page
     </Badge> */}
       </Heading>
 
       <Container maxW="container.lg" overflowX="auto">
-        <chakra.pre className="profile-info">
-          <div className="button-container">
-            <button className="profile-button">Your Uid:</button>
-            <span className="profile-value">{currentUser.uid}</span>
-          </div>
+        <Card>
+          <chakra.pre className="profile-info">
+            <div className="button-container">
+              <button className="profile-button">Your Uid:</button>
+              <span className="profile-value">{currentUser.uid}</span>
+            </div>
 
-          <div className="button-container">
-            <button className="profile-button">Your Name:</button>
-            <span className="profile-value">{currentUser.displayName}</span>
-          </div>
+            <div className="button-container">
+              <button className="profile-button">Your Name:</button>
+              <span className="profile-value">{currentUser.displayName}</span>
+            </div>
 
-          <div className="button-container">
-            <button className="profile-button">Your Email Id:</button>
-            <span className="profile-value">{currentUser.email}</span>
-          </div>
-        </chakra.pre>
+            <div className="button-container">
+              <button className="profile-button">Your Email Id:</button>
+              <span className="profile-value">{currentUser.email}</span>
+            </div>
+          </chakra.pre>
+        </Card>
       </Container>
     </Layout>
   );

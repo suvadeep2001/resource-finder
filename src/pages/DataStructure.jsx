@@ -3,7 +3,7 @@ import { Heading, List, ListItem, Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Layout } from "../components/Layout";
 import ButtonBasicPart from "../components/ButtonBasicPart";
-import ButtonAdvancePart from "../components/ButtonAdvancePart"
+import ButtonAdvancePart from "../components/ButtonAdvancePart";
 import ButtonOtherPart from "../components/ButtonOtherPart";
 
 const DataStructure = () => {
@@ -45,7 +45,7 @@ const DataStructure = () => {
           animate="visible"
         >
           <motion.div variants={textVariants}>
-            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="cyan">
+            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="#51E1ED">
               <Heading
                 as="h2"
                 size="lg"
@@ -56,50 +56,39 @@ const DataStructure = () => {
                 <u>Basic</u>
               </Heading>
               <List styleType="none" pl={0} textAlign="center">
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Recursion & Backtracking
                 </ListItem>
 
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Sorting Algorithms
                 </ListItem>
 
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Linked Lists
                 </ListItem>
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Stacks (LIFO)
                 </ListItem>
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Queues (FIFO)
                 </ListItem>
               </List>
+              <Heading
+                as="h2"
+                size="lg"
+                mb={2}
+                color="#4A5568"
+                fontFamily="'Lobster', cursive"
+              >
+                <u>Resources</u>
+              </Heading>
+              <ButtonBasicPart />
             </Box>
           </motion.div>
-          <ButtonBasicPart/>
 
           <motion.div variants={textVariants}>
-            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="cyan">
+            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="#E5D68A">
               <Heading
                 as="h2"
                 size="lg"
@@ -121,12 +110,21 @@ const DataStructure = () => {
                   Graphs
                 </ListItem>
               </List>
+              <Heading
+                as="h2"
+                size="lg"
+                mb={2}
+                color="#4A5568"
+                fontFamily="'Lobster', cursive"
+              >
+                <u>Resources</u>
+              </Heading>
+              <ButtonAdvancePart />
             </Box>
           </motion.div>
-          <ButtonAdvancePart/>
 
           <motion.div variants={textVariants}>
-            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="cyan">
+            <Box borderWidth={1} borderRadius="md" p={4} mb={4} bg="#6AC47E">
               <Heading
                 as="h2"
                 size="lg"
@@ -137,65 +135,44 @@ const DataStructure = () => {
                 <u>Other Topics</u>
               </Heading>
               <List styleType="none" pl={0} textAlign="center">
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Hashmaps
                 </ListItem>
                 {/* Add more Other Topics here */}
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Tries
                 </ListItem>
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Bit Manipulation
                 </ListItem>
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Greedy
                 </ListItem>
 
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Circular Queues
                 </ListItem>
 
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
-                  Deques - Hot Topic
+                <ListItem py={2} color="black">
+                  Deques
                 </ListItem>
 
-                <ListItem
-                  py={2}
-                  color="black"
-                  fontFamily="'Josefin Sans', sans-serif"
-                >
+                <ListItem py={2} color="black">
                   Doubly And Circular LL
                 </ListItem>
               </List>
+              <Heading
+                as="h2"
+                size="lg"
+                mb={2}
+                color="#4A5568"
+                fontFamily="'Lobster', cursive"
+              >
+                <u>Resources</u>
+              </Heading>
+              <ButtonOtherPart />
             </Box>
           </motion.div>
-
-            <ButtonOtherPart/>
-          
         </motion.div>
       </Box>
     </Layout>

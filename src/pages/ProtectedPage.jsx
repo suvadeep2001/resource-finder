@@ -12,7 +12,7 @@ export default function ProtectedPage() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://server-d4j9.onrender.com/api/data"
+          "https://server-eight-ashen.vercel.app/api/data"
         );
         setResources(response.data);
       } catch (error) {
@@ -33,7 +33,7 @@ export default function ProtectedPage() {
 
   return (
     <Layout>
-      <Heading>
+      <Heading fontFamily="'Lobster', cursive">
         <u>All Resources</u>
       </Heading>
       <Input

@@ -20,7 +20,7 @@ const FeaturedResources = () => {
       "title": "Click Here",
       "description": "Data Structures & Algorithms",
       "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
-      "url": "https://medium.com/@rd893918/perfect-roadmap-for-data-structure-and-algorithm-6062f2490431"
+      "url": "https://resource-finder-8c366.web.app/dsa"
     }
   ]
 

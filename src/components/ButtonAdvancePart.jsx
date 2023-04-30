@@ -1,9 +1,11 @@
 import React from "react";
-import { Heading, List, ListItem, Box, Button } from "@chakra-ui/react";
+import { Heading, List, ListItem, Box, Button, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Layout } from "./Layout";
 
 const ButtonAdvancePart = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   const buttonVariants = {
     hidden: {
       opacity: 0,
@@ -18,12 +20,13 @@ const ButtonAdvancePart = () => {
       },
     },
   };
+
   return (
     <motion.div variants={buttonVariants}>
-      <Box display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="center" flexWrap={isMobile ? "wrap" : "nowrap"}>
         <Button
           as="a"
-          href="https://www.codechef.com/certification/data-structures-and-algorithms/prepare"
+          href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTo87y1ytEAqp7wYlEP3nner"
           variant="solid"
           colorScheme="blue"
           mr={2}
@@ -31,11 +34,11 @@ const ButtonAdvancePart = () => {
           py={2}
           mb={2}
         >
-          Button 1
+          Binary Trees
         </Button>
         <Button
           as="a"
-          href="#"
+          href="https://youtu.be/UeRUKRJvPa4"
           variant="solid"
           colorScheme="green"
           mr={2}
@@ -43,11 +46,11 @@ const ButtonAdvancePart = () => {
           py={2}
           mb={2}
         >
-          Button 2
+          BST
         </Button>
         <Button
           as="a"
-          href="#"
+          href="https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw"
           variant="solid"
           colorScheme="purple"
           mr={2}
@@ -55,7 +58,7 @@ const ButtonAdvancePart = () => {
           py={2}
           mb={2}
         >
-          Button 3
+          Graphs
         </Button>
       </Box>
     </motion.div>

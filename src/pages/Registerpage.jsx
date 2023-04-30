@@ -8,7 +8,10 @@ import {
   Input,
   Stack,
   useToast,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
@@ -30,6 +33,7 @@ export default function Registerpage() {
   const { register, signInWithGoogle } = useAuth();
 
   const mounted = useMounted();
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <Layout>
@@ -52,9 +56,9 @@ export default function Registerpage() {
             }
 
             setIsSubmitting(true);
-            
+
             try {
-              await register(name,email, password);
+              await register(name, email, password);
               toast({
                 description: "Please check your email to verify your account",
                 status: "success",
@@ -77,8 +81,7 @@ export default function Registerpage() {
           }}
         >
           <Stack spacing="6">
-
-          <FormControl id="name">
+            <FormControl id="name">
               <FormLabel>Name</FormLabel>
               <Input
                 value={name}
@@ -103,14 +106,26 @@ export default function Registerpage() {
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                name="password"
-                type="password"
-                autoComplete="password"
-                required
-              />
+              <InputGroup>
+                <Input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="password"
+                  required
+                />
+                <InputRightElement>
+                  <Button
+                    h="1.75rem"
+                    size="sm"
+                    color={"black"}
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
             </FormControl>
             <Button
               isLoading={isSubmitting}

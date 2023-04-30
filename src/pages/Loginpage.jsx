@@ -8,10 +8,14 @@ import {
   Input,
   Stack,
   useToast,
+  InputGroup,
+  InputRightElement,
   Text,
   Box,
   Flex,
 } from "@chakra-ui/react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 import React, { useEffect, useRef, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
@@ -32,6 +36,8 @@ export default function Loginpage() {
   const toast = useToast();
   const { login,signInWithGoogle } = useAuth();
   const mounted = useMounted();
+  const [showPassword, setShowPassword] = useState(false);
+
 
   return (
     <Layout>
@@ -87,14 +93,26 @@ export default function Loginpage() {
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                name="password"
-                type="password"
-                autoComplete="password"
-                required
-              />
+              <InputGroup>
+                <Input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="password"
+                  required
+                />
+                <InputRightElement>
+                  <Button
+                    h="1.75rem"
+                    size="sm"
+                    color={"black"}
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
             </FormControl>
             {/* <PasswordField /> */}
             <Button

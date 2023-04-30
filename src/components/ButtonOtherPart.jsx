@@ -1,9 +1,11 @@
 import React from "react";
-import { Heading, List, ListItem, Box, Button } from "@chakra-ui/react";
+import { Heading, List, ListItem, Box, Button, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Layout } from "./Layout";
 
 const ButtonOtherPart = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   const buttonVariants = {
     hidden: {
       opacity: 0,
@@ -18,12 +20,13 @@ const ButtonOtherPart = () => {
       },
     },
   };
+
   return (
     <motion.div variants={buttonVariants}>
-      <Box display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="center" flexWrap={isMobile ? "wrap" : "nowrap"}>
         <Button
           as="a"
-          href="https://www.codechef.com/certification/data-structures-and-algorithms/prepare"
+          href="https://www.youtube.com/playlist?list=PLzjZaW71kMwQ-D3oxCEDHAvYu8VC1XOsS"
           variant="solid"
           colorScheme="blue"
           mr={2}
@@ -31,11 +34,11 @@ const ButtonOtherPart = () => {
           py={2}
           mb={2}
         >
-          Button 1
+          Hashmaps
         </Button>
         <Button
           as="a"
-          href="#"
+          href="https://www.youtube.com/playlist?list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp"
           variant="solid"
           colorScheme="green"
           mr={2}
@@ -43,11 +46,11 @@ const ButtonOtherPart = () => {
           py={2}
           mb={2}
         >
-          Button 2
+          Tries
         </Button>
         <Button
           as="a"
-          href="#"
+          href="https://www.youtube.com/playlist?list=PLX0iyO9CrCF1-4je7G0JMSr_50I0J2K3Z"
           variant="solid"
           colorScheme="purple"
           mr={2}
@@ -55,7 +58,55 @@ const ButtonOtherPart = () => {
           py={2}
           mb={2}
         >
-          Button 3
+          Bit Manipulation
+        </Button>
+        <Button
+          as="a"
+          href="https://www.youtube.com/playlist?list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf"
+          variant="solid"
+          colorScheme="green"
+          mr={2}
+          px={4}
+          py={2}
+          mb={2}
+        >
+          Greedy
+        </Button>
+        <Button
+          as="a"
+          href="https://www.geeksforgeeks.org/introduction-to-circular-queue/"
+          variant="solid"
+          colorScheme="purple"
+          mr={2}
+          px={4}
+          py={2}
+          mb={2}
+        >
+          Circular Queues
+        </Button>
+        <Button
+          as="a"
+          href="https://youtu.be/g9wTzeq0Y-g"
+          variant="solid"
+          colorScheme="blue"
+          mr={2}
+          px={4}
+          py={2}
+          mb={2}
+        >
+          Deques
+        </Button>
+        <Button
+          as="a"
+          href="https://youtu.be/q8gdBn9RPeI"
+          variant="solid"
+          colorScheme="yellow"
+          mr={2}
+          px={4}
+          py={2}
+          mb={2}
+        >
+          Doubly And Circular LL
         </Button>
       </Box>
     </motion.div>
