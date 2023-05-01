@@ -2,9 +2,9 @@ import React from "react";
 import { Heading, List, ListItem, Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Layout } from "../components/Layout";
-import ButtonBasicPart from "../components/ButtonBasicPart";
-import ButtonAdvancePart from "../components/ButtonAdvancePart";
-import ButtonOtherPart from "../components/ButtonOtherPart";
+import ButtonBasicPart from "../components/DSA_Button/ButtonBasicPart";
+import ButtonAdvancePart from "../components/DSA_Button/ButtonAdvancePart";
+import ButtonOtherPart from "../components/DSA_Button/ButtonOtherPart";
 
 const DataStructure = () => {
   const containerVariants = {

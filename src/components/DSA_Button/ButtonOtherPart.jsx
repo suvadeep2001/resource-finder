@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, List, ListItem, Box, Button, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { Layout } from "./Layout";
+import { Layout } from "../Layout";
 
 const ButtonOtherPart = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");

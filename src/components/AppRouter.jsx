@@ -14,6 +14,7 @@ import {
   useLocation,
 } from "react-router-dom/cjs/react-router-dom.min";
 import DataStructure from "../pages/DataStructure";
+import DbmsResources from "../pages/DbmsResources";
 
 export default function AppRouter(props) {
   return (
@@ -25,6 +26,7 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path="/register" component={Registerpage} />
           <ProtectedRoute exact path="/profile" component={Profilepage} />
           <ProtectedRoute exact path="/dsa" component={DataStructure} />
+          <ProtectedRoute exact path="/dbms" component={DbmsResources} />
           <ProtectedRoute
             exact
             path="/resources"

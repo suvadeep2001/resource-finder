@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, List, ListItem, UnorderedList } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
-import myVideo from "../video/vid.mp4";
+import myVideo from "../assets/vid.mp4";
 const AboutMe = () => {
   const containerVariants = {
     hidden: {

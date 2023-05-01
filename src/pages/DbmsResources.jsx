@@ -3,9 +3,9 @@ import { Layout } from "../components/Layout";
 import { Heading, Container, Badge, Input } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import API_URL from "../config";
+import API_URL from "../dbms";
 
-export default function ProtectedPage() {
+export default function DbmsResources() {
   const [resources, setResources] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -18,9 +18,9 @@ export default function ProtectedPage() {
         console.log("Error fetching resources:", error);
       }
     };
-
+  
     fetchData();
-  }, []);
+  }, []);  
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -33,7 +33,7 @@ export default function ProtectedPage() {
   return (
     <Layout>
       <Heading fontFamily="'Lobster', cursive">
-        <u>All Resources</u>
+        <u>Prepare DBMS For Interviews</u>
       </Heading>
       <Input
         type="text"
@@ -45,7 +45,7 @@ export default function ProtectedPage() {
       />
       <div className="resource-list">
         {filteredResources.map((resource) => (
-          <motion.div
+          <div
             key={resource.id}
             className="resource"
             animate={{ y: [0, -10, 0] }}
@@ -53,15 +53,15 @@ export default function ProtectedPage() {
           >
             <a href={resource.url} target="__blank">
               <img src={resource.image} alt={resource.title} />
-              <motion.button
+              <button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 {resource.title}
-              </motion.button>
+              </button>
             </a>
-            <motion.p>{resource.description}</motion.p>
-          </motion.div>
+            <p>{resource.description}</p>
+          </div>
         ))}
       </div>
     </Layout>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../css/FeaturedResources.css";
+
 import { motion } from "framer-motion";
 import {
   Badge,
@@ -12,6 +12,12 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 
+import "../css/FeaturedResources.css";
+import DBMS from '../assets/DBMS.jpg';
+import DSA from '../assets/DSA.jpg'
+import OOPS from '../assets/OOPS.jpg'
+
+
 const FeaturedResources = () => {
   // const [resources, setResources] = useState([]);
   const resources = [
@@ -19,8 +25,22 @@ const FeaturedResources = () => {
       "id": "1",
       "title": "Click Here",
       "description": "Data Structures & Algorithms",
-      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+      "image": DSA,
       "url": "https://resource-finder-8c366.web.app/dsa"
+    },
+    {
+      "id": "2",
+      "title": "Click Here",
+      "description": "Database Management System",
+      "image": DBMS,
+      "url": "https://resource-finder-8c366.web.app/dbms"
+    },
+    {
+      "id": "3",
+      "title": "Click Here",
+      "description": "object oriented programming",
+      "image": OOPS,
+      "url": "https://resource-finder-8c366.web.app/oops"
     }
   ]
 
