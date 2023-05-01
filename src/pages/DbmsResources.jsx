@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
-import { Heading, Container, Badge, Input } from "@chakra-ui/react";
+import { Heading, Container, Badge, Input, Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import API_URL from "../dbms";
@@ -8,6 +8,8 @@ import API_URL from "../dbms";
 export default function DbmsResources() {
   const [resources, setResources] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const resourcesPerPage = 6;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,9 +20,9 @@ export default function DbmsResources() {
         console.log("Error fetching resources:", error);
       }
     };
-  
+
     fetchData();
-  }, []);  
+  }, []);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -29,6 +31,18 @@ export default function DbmsResources() {
   const filteredResources = resources.filter((resource) =>
     resource.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // Pagination logic
+  const indexOfLastResource = currentPage * resourcesPerPage;
+  const indexOfFirstResource = indexOfLastResource - resourcesPerPage;
+  const currentResources = filteredResources.slice(
+    indexOfFirstResource,
+    indexOfLastResource
+  );
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <Layout>
@@ -44,7 +58,7 @@ export default function DbmsResources() {
         mb={8}
       />
       <div className="resource-list">
-        {filteredResources.map((resource) => (
+        {currentResources.map((resource) => (
           <div
             key={resource.id}
             className="resource"
@@ -64,6 +78,16 @@ export default function DbmsResources() {
           </div>
         ))}
       </div>
+      <Box mt={4} display="flex" justifyContent="center">
+        {Array.from(
+          { length: Math.ceil(filteredResources.length / resourcesPerPage) },
+          (_, index) => (
+            <Button key={index} onClick={() => paginate(index + 1)}>
+              {index + 1}
+            </Button>
+          )
+        )}
+      </Box>
     </Layout>
   );
 }
