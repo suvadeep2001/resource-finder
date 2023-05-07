@@ -40,7 +40,7 @@ const FeaturedResources = () => {
       "title": "Click Here",
       "description": "object oriented programming",
       "image": OOPS,
-      "url": "http://localhost:3000/oops"
+      "url": "https://resource-finder-8c366.web.app/oops"
     }
   ]
 

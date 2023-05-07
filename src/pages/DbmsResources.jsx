@@ -59,23 +59,23 @@ export default function DbmsResources() {
       />
       <div className="resource-list">
         {currentResources.map((resource) => (
-          <div
-            key={resource.id}
-            className="resource"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
+          <motion.div
+          key={resource.id}
+          className="resource"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
             <a href={resource.url} target="__blank">
               <img src={resource.image} alt={resource.title} />
-              <button
+              <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 {resource.title}
-              </button>
+              </motion.button>
             </a>
-            <p>{resource.description}</p>
-          </div>
+            <motion.p>{resource.description}</motion.p>
+            </motion.div>
         ))}
       </div>
       <Box mt={4} display="flex" justifyContent="center">

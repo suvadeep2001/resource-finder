@@ -16,6 +16,7 @@ import {
 import DataStructure from "../pages/DataStructure";
 import DbmsResources from "../pages/DbmsResources";
 import OopsResources from "../pages/OopsResources";
+import Quiz from "../pages/Quiz";
 
 export default function AppRouter(props) {
   return (
@@ -29,6 +30,7 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path="/dsa" component={DataStructure} />
           <ProtectedRoute exact path="/dbms" component={DbmsResources} />
           <ProtectedRoute exact path="/oops" component={OopsResources} />
+          <ProtectedRoute exact path="/aptitude" component={Quiz} />
           
           <ProtectedRoute
             exact
