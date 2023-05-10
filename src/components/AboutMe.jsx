@@ -89,24 +89,24 @@ const AboutMe = () => {
         <u>Key Features</u>
       </Heading>
       <UnorderedList fontSize="md" my={4}>
-        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif">
+        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif" fontWeight="bold">
           Resource Categorization: Our app organizes resources into various
           categories, making it easy for you to navigate and find exactly what
           you need. From educational resources to professional tools, we've got
           you covered.
         </ListItem>
-        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif">
+        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif" fontWeight="bold">
           User-Friendly Interface: We have designed our app with a clean and
           intuitive interface, ensuring a smooth and enjoyable user experience.
           You can easily search, filter, and explore resources with just a few
           taps.
         </ListItem>
-        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif">
+        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif" fontWeight="bold">
           Ratings and Reviews: Share your thoughts and experiences with the
           resources you've used. Rate and review resources to help others in the
           community make informed decisions.
         </ListItem>
-        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif">Top Interview Problem Sets With Practice Problems</ListItem>
+        <ListItem size="md" fontFamily="'Josefin Sans', sans-serif" fontWeight="bold">Top Interview Problem Sets With Practice Problems</ListItem>
       </UnorderedList>
     </>
   );
