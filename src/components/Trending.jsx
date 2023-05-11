@@ -22,7 +22,7 @@ const Trending = () => {
           "title": "Click Here",
           "description": "Test Youraptitude Skills",
           "image": Aptitude,
-          "url": "https://resource-finder-8c366.web.app/aptitude"
+          "url": "https://resource-finder-8c366.web.app/trending/aptitude"
         }
       ]
 

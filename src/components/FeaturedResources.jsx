@@ -26,21 +26,21 @@ const FeaturedResources = () => {
       "title": "Click Here",
       "description": "Data Structures & Algorithms",
       "image": DSA,
-      "url": "https://resource-finder-8c366.web.app/dsa"
+      "url": "https://resource-finder-8c366.web.app/resources/dsa"
     },
     {
       "id": "2",
       "title": "Click Here",
       "description": "Database Management System",
       "image": DBMS,
-      "url": "https://resource-finder-8c366.web.app/dbms"
+      "url": "https://resource-finder-8c366.web.app/resources/dbms"
     },
     {
       "id": "3",
       "title": "Click Here",
       "description": "object oriented programming",
       "image": OOPS,
-      "url": "https://resource-finder-8c366.web.app/oops"
+      "url": "https://resource-finder-8c366.web.app/resources/oops"
     }
   ]
 

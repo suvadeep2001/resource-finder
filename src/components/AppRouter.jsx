@@ -27,10 +27,10 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path="/login" component={Loginpage} />
           <ProtectedRoute exact path="/register" component={Registerpage} />
           <ProtectedRoute exact path="/profile" component={Profilepage} />
-          <ProtectedRoute exact path="/dsa" component={DataStructure} />
-          <ProtectedRoute exact path="/dbms" component={DbmsResources} />
-          <ProtectedRoute exact path="/oops" component={OopsResources} />
-          <ProtectedRoute exact path="/aptitude" component={Quiz} />
+          <ProtectedRoute exact path="/resources/dsa" component={DataStructure} />
+          <ProtectedRoute exact path="/resources/dbms" component={DbmsResources} />
+          <ProtectedRoute exact path="/resources/oops" component={OopsResources} />
+          <ProtectedRoute exact path="/trending/aptitude" component={Quiz} />
           
           <ProtectedRoute
             exact
