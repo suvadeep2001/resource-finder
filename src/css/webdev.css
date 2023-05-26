@@ -8,6 +8,8 @@
 .heading {
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+  font-family: 'Raleway', sans-serif;
 }
 
 .project-list {
@@ -30,6 +32,8 @@
 .project-card h2 {
   font-size: 20px;
   margin-bottom: 10px;
+  font-family: 'Lobster', cursive;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .project-card ul {
@@ -40,6 +44,8 @@
 
 .project-card ul li {
   margin-bottom: 8px;
+  font-family: 'Lobster', cursive;
+  font-family: 'Playfair Display', serif;
 }
 
 .project-button {
@@ -59,8 +65,9 @@
 .project-button:hover {
   background-color: #e6574a;
 }
+
 @media (max-width: 600px) {
   .project-card {
-    width: 90%; 
+    width: 90%;
   }
 }

@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 
 import Aptitude from '../assets/aptitude.jpg';
+import WebDev from '../assets/WebDev.png';
 import "../css/FeaturedResources.css";
 
 const Trending = () => {
@@ -23,6 +24,13 @@ const Trending = () => {
           "description": "Test Youraptitude Skills",
           "image": Aptitude,
           "url": "https://resource-finder-8c366.web.app/trending/aptitude"
+        },
+        {
+          "id": "2",
+          "title": "Click Here",
+          "description": "Top Web Dev Projects For Placements",
+          "image": WebDev,
+          "url": "https://resource-finder-8c366.web.app/trending/webdevprojects"
         }
       ]
 
