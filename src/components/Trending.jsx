@@ -13,6 +13,7 @@ import axios from "axios";
 
 import Aptitude from '../assets/aptitude.jpg';
 import WebDev from '../assets/WebDev.png';
+import RoadMap from '../assets/frontend.png';
 import "../css/FeaturedResources.css";
 
 const Trending = () => {
@@ -31,6 +32,13 @@ const Trending = () => {
           "description": "Top Web Dev Projects For Placements",
           "image": WebDev,
           "url": "https://resource-finder-8c366.web.app/trending/webdevprojects"
+        },
+        {
+          "id": "3",
+          "title": "Click Here",
+          "description": "FRONTEND DEVELOPER ROADMAP",
+          "image": RoadMap,
+          "url": "https://resource-finder-8c366.web.app/trending/frontend-roadmap"
         }
       ]
 
