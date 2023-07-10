@@ -5,68 +5,97 @@ import { Layout } from "../components/Layout";
 const App = () => {
   const questions = [
     {
-      question:
-        "A can do a piece of work in 12 days and B can do it in 18 days. They work together for 2 days and then A leaves. How long will B take to finish the remaining work ?",
-      options: ["6 days", "8 days", "10 days", "13 days"],
-      answer: "13 days",
+      "question": "A train travels at a speed of 75 km/h for the first 3 hours, then increases its speed to 90 km/h for the next 2 hours. What is the average speed of the train for the entire journey?",
+      "options": ["72 km/h", "78 km/h", "80 km/h", "75 km/h"],
+      "answer": "75 km/h"
     },
     {
-      question:
-        "A certain number of men can complete a job in 30 days. If there were 5 men more, it could be completed in 10 days less. How many men were in the beginning?",
-      options: ["10", "15", "20", "25"],
-      answer: "10",
+      "question": "If the ratio of the length to the breadth of a rectangle is 5:3 and its perimeter is 64 cm, what is the area of the rectangle?",
+      "options": ["220 cm²", "240 cm²", "200 cm²", "180 cm²"],
+      "answer": "240 cm²"
     },
     {
-      question:
-        "If a number is as much greater than 31 as it is less than 75, then the number is",
-      options: ["45", "78", "53", "74"],
-      answer: "53",
+      "question": "In a certain code, 'JUMP' is written as 'KNTO'. How will 'HELP' be written in that code?",
+      "options": ["FIMO", "IFMQ", "GKOR", "HLNQ"],
+      "answer": "IFMQ"
     },
     {
-      question:
-        "If 12 carpenters working 6 hours a day can make 460 chairs in 240 days, then the number of chairs made by 18 carpenters in 36 days each working 8 hours a day is ",
-      options: ["138", "45", "78", "40"],
-      answer: "138",
+      "question": "A shopkeeper sold an article for $1,050, incurring a loss of 10%. What was the cost price of the article?",
+      "options": ["$1,000", "$1,166.67", "$1,150", "$1,200"],
+      "answer": "$1,166.67"
     },
     {
-      question:
-        "A man complete a journey in 10 hours. He travels first half of the journey at the rate of 21 km/hr and second half at the rate of 24 km/hr. Find the total journey in km.",
-      options: ["222", "224", "451", "480"],
-      answer: "224",
+      "question": "If a certain sum of money doubles itself in 5 years at simple interest, in how many years will it become four times the original sum?",
+      "options": ["4 years", "5 years", "10 years", "20 years"],
+      "answer": "5 years"
     },
     {
-      question:
-        "Which of the following statement is correct regarding destructor of base class?",
-      options: [
-        "Destructor of base class should always be static",
-        "Destructor of base class should always be virtual",
-        "Destructor of base class should not be virtual",
-        "Destructor of base class should always be private",
-      ],
-      answer: "Destructor of base class should always be virtual",
+      "question": "The difference between a two-digit number and the number obtained by reversing its digits is 36. If the digit at the unit's place is smaller than the digit at the ten's place, what is the sum of the two digits?",
+      "options": ["6", "7", "8", "9"],
+      "answer": "8"
     },
     {
-      question: "Introducing a boy, a girl said, \"He is the son of the daughter of the father of my uncle.\" How is the boy related to the girl?",
-      options: ["Brother","Nephew","Uncle","Son-in-law"],
-      answer: "Nephew",
+      "question": "A shopkeeper sells an item at a profit of 20%. If the cost price of the item is $500, what is the selling price?",
+      "options": ["$520", "$600", "$480", "$650"],
+      "answer": "$600"
     },
     {
-      question: "The total of the ages of Amar, Akbar and Anthony is 100 years. What was the total of their ages three years ago ?",
-      options: ["90","91","92","93"],
-      answer: "91",
+      "question": "A car covers a distance of 600 km with a speed of 75 km/h. If the speed is increased by 25%, how much time will the car take to cover the same distance?",
+      "options": ["6.2 hours", "5.6 hours", "7.5 hours", "6.4 hours"],
+      "answer": "6.4 hours"
     },
     {
-      question: "A, B, C, D and E play a game of cards. A says to B, \"If you give me three cards, you will have as many as E has and if I give you three cards, you will have as many as D has.\" A and B together have 10 cards more than what D and E together have. If B has two cards more than what C has and the total number of cards be 133, how many cards does B have ?",
-      options: ["22","23","25","35"],
-      answer: "25",
+      "question": "A man invested a certain sum of money at a simple interest rate of 8% per annum. After 5 years, he received an amount of $4,800. What was the original sum of money invested?",
+      "options": ["$10,000", "$12,000", "$8,000", "$5,000"],
+      "answer": "$12,000"
     },
     {
-      question: "A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:",
-      options: ["145","150","155","160"],
-      answer: "155",
+      "question": "A box contains 8 red balls and 5 blue balls. If two balls are drawn at random without replacement, what is the probability that both balls are red?",
+      "options": ["1/26", "1/20", "7/26", "9/26"],
+      "answer": "7/26"
     },
-    // Add more questions...
-  ];
+    {
+      "question": "If 3 workers can complete a task in 12 days, how many workers are needed to complete the same task in 6 days?",
+      "options": ["3 workers", "6 workers", "9 workers", "12 workers"],
+      "answer": "6 workers"
+    },
+    {
+      "question": "The ratio of the present ages of two persons is 3:5. After 5 years, the ratio of their ages will be 4:7. What is the present age of the younger person?",
+      "options": ["10 years", "12 years", "15 years", "18 years"],
+      "answer": "15 years"
+    },
+    {
+      "question": "A boat can travel 12 km/h in still water. It takes 4 hours to travel upstream a certain distance and 3 hours to travel downstream the same distance. What is the speed of the stream?",
+      "options": ["3 km/h", "5 km/h", "6 km/h", "8 km/h"],
+      "answer": "6 km/h"
+    },
+    {
+      "question": "A can do a piece of work in 12 days, while B can do the same work in 18 days. They start working together but after 4 days, A leaves. In how many more days will B complete the remaining work?",
+      "options": ["6 days", "8 days", "10 days", "12 days"],
+      "answer": "12 days"
+    },
+    {
+      "question": "The difference between compound interest and simple interest on a certain sum of money for 2 years at 10% per annum is $36. What is the sum of money?",
+      "options": ["$100", "$150", "$200", "$171.43"],
+      "answer": "$171.43"
+    },
+    {
+      "question": "The ratio of the ages of A and B is 4:5. After 8 years, the sum of their ages will be 72. What will be the ratio of their ages after 8 years?",
+      "options": ["3:4", "4:5", "5:6", "6:7"],
+      "answer": "5:6"
+    },
+    {
+      "question": "The sum of the present ages of a father and his son is 48 years. Five years ago, the father was eight times older than his son. What are their present ages?",
+      "options": ["Father: 36 years, Son: 12 years", "Father: 42 years, Son: 6 years", "Father: 39 years, Son: 9 years", "Father: 45 years, Son: 3 years"],
+      "answer": "Father: 39 years, Son: 9 years"
+    },
+    {
+      "question": "A box contains 5 red balls, 4 blue balls, and 3 green balls. If 3 balls are drawn at random without replacement, what is the probability that at least one ball is green?",
+      "options": ["0.453", "0.597", "0.703", "0.816"],
+      "answer": "0.597"
+    }
+  ]
+  
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
